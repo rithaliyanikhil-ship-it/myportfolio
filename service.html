@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Stack+Sans+Headline:wght@200..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="service.css">
+
+</head>
+
+<body>
+    <button id="dark-mode-btn" type="button">Dark Mode</button>
+    <header id="top">
+        <div class="wrap">
+            <div class="service">My services.</div>
+            <nav class="top">
+                <a href="portfolio.html" class="link">home</a>
+                <a href="about.html" class="link">about me</a>
+                <a href="service.html" class="link">services</a>
+                <a href="projects.html" class="link">projects</a>
+            </nav>
+        </div>
+        <div class="para01">
+            What I Can BUILD For you...
+        </div>
+    </header>
+    <main class="container">
+        <div class="services-grid">
+
+            <div class="service-box" onclick="showService('fullstack')">
+                <h2>💻 Full-Stack Development</h2>
+                <p>React • Node.js • MySQL</p>
+            </div>
+
+            <div class="service-box" onclick="showService('frontend')">
+                <h2>🎨 Frontend Development</h2>
+                <p>HTML • CSS • JavaScript • Bootstrap</p>
+            </div>
+
+            <div class="service-box" onclick="showService('react')">
+                <h2>⚛️ React Development</h2>
+                <p>React • JavaScript • Responsive UI</p>
+            </div>
+
+            <div class="service-box" onclick="showService('api')">
+                <h2>🔗 API & Database</h2>
+                <p>Node.js • REST API • MySQL</p>
+            </div>
+
+        </div>
+        <div id="service-details" class="service-details">
+            <h2 id="detail-title"></h2>
+            <p id="detail-content"></p>
+        </div>
+    </main>
+
+</body>
+<script type="text/javascript" src="portfolio.js"></script>
+
+</html>

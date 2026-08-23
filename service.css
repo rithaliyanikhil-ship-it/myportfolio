@@ -1,0 +1,270 @@
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+
+    gap: 25px;
+
+    width: 90%;
+    max-width: 900px;
+
+    margin: 40px auto;
+}
+
+body {
+    margin: 0;
+    background: #f4f4f4;
+    color: #222;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-box {
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 15px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.dark-mode {
+    background: #111;
+    color: #f4f4f4;
+}
+
+.dark-mode .service-box {
+    background: #222;
+    border-color: #444;
+}
+
+.dark-mode .service-box p {
+    color: #c8c8c8;
+}
+
+.service-box:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-box h2 {
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.service-box p {
+    font-family: "Nunito", sans-serif;
+    color: #666;
+}
+button {
+    font-family:"Stack Sans Headline", sans-serif ;
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.dark-mode button {
+    background: #f4f4f4;
+    color: #111;
+    border: 1px solid #777;
+}
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.service{
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    padding-top: 80px;
+    padding-left: 50px;
+    text-align: center;
+}
+.top{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+
+}
+.link{
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: rgb(65, 117, 144);
+}
+
+.dark-mode .link {
+    color: #f4f4f4;
+}
+
+.dark-mode .link:hover {
+    color: rgb(130, 190, 220);
+}
+
+.dark-mode .para01 {
+    color: #f4f4f4;
+}
+.para01{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 40px;
+    animation: spin 2s ease-in-out 0.5s 1 forwards ;
+    width: 0;
+     overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 50px;
+}
+@keyframes spin {
+ from{
+    width: 0ch;
+ }
+ to{
+    width: 30ch;
+ }
+}
+.service-details {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+
+    background: white;
+    border-radius: 15px;
+
+    border: 1px solid #ddd;
+
+    text-align: center;
+
+    display: none;
+}
+
+.service-details.show {
+    display: block;
+}
+
+.service-details h2 {
+    font-family: "Stack Sans Headline", sans-serif;
+    margin-bottom: 15px;
+}
+
+.service-details p {
+    font-family: "Nunito", sans-serif;
+    color: #555;
+    line-height: 1.7;
+}
+
+.dark-mode .service-details {
+    background: #222;
+    border-color: #444;
+}
+
+.dark-mode .service-details p {
+    color: #c8c8c8;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Header */
+    .wrap {
+        display: block;
+        text-align: center;
+    }
+
+    .service {
+        font-size: 26px;
+        padding-top: 80px;
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Navigation */
+    .top {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .link {
+        font-size: 16px;
+        margin: 5px 8px;
+    }
+
+    /* Subtitle */
+    .para01 {
+        margin: 30px auto;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    /* Service cards */
+    .services-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 90%;
+        gap: 20px;
+    }
+
+    .service-box {
+        min-height: 180px;
+        padding: 20px;
+    }
+
+    .service-box h2 {
+        font-size: 19px;
+    }
+
+    .service-box p {
+        font-size: 15px;
+    }
+
+    /* Service details */
+    .service-details {
+        width: 80%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .service-details h2 {
+        font-size: 22px;
+    }
+
+    .service-details p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
